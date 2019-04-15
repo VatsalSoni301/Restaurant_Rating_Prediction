@@ -1,0 +1,35 @@
+restaurant.csv
+
+[ RID, Rname, RAddress, RLocality, RCity, RLatitute, Rlongitude, RZipcode, Rcuisines, Raverage_cost_for_two, Ruser_rating, Rrating_text,  ] 
+
+Review.csv
+[ Rid, Rrating, Rreview_text, Rrating_text, RUser, ]
+
+DrawBack : Zomato always return max 100 restaurant details using its API
+https://stackoverflow.com/questions/42013020/zomato-api-always-returning-only-20-restaurants-in-search-by-location-response
+
+
+Search City ID by city Name
+
+curl -X GET --header "Accept: application/json" --header "user-key: 8140a497cd4fc96c73c82b1eecc1da88" "https://developers.zomato.com/api/v2.1/cities?q=Ahmedabad"
+
+https://developers.zomato.com/api/v2.1/cities?q=Ahmedabad
+cityId = 11
+
+
+https://developers.zomato.com/api/v2.1/cities?q=Hyderabad
+cityId = 6
+
+To get List of all restarant ID from CITYID 
+
+Add this in head in GET request to authenticate  
+	==> user-key = 8140a497cd4fc96c73c82b1eecc1da88
+
+https://developers.zomato.com/api/v2.1/search?entity_id=6&entity_type=city
+
+https://developers.zomato.com/api/v2.1/search?entity_id=11&entity_type=city
+
+
+
+
+
